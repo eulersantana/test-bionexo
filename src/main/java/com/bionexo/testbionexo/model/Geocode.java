@@ -35,6 +35,11 @@ public class Geocode {
 	public void setLng(Double lng) {
 		this.lng = lng;
 	}
+
+	@Override
+	public String toString() {
+		return "Geocode [lat=" + lat + ", lng=" + lng + "]";
+	}
 	
 	
 }

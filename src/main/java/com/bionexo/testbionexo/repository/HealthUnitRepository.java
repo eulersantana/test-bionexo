@@ -15,7 +15,7 @@ import com.bionexo.testbionexo.model.Score;
 import com.fasterxml.jackson.core.JsonGenerationException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 
-public class HealthUnitRepository {
+public class HealthUnitRepository  {
 	private static final Map<Integer, HealthUnit> MAP_HEALTHUNIT_DB = new HashMap<Integer, HealthUnit>();
 	
 	public HealthUnit findHealthUnit(Integer id) {
