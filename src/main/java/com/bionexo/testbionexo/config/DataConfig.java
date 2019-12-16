@@ -21,7 +21,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.Resource;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseBuilder;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType;
-
+import com.bionexo.testbionexo.config.DBlogProcessor;
 import com.bionexo.testbionexo.model.HealthUnit;
 
 import javax.sql.DataSource;
@@ -86,7 +86,7 @@ public class DataConfig {
 
         itemWriter.setDataSource(dataSource());
         itemWriter.setSql("INSERT INTO HOTELS ( ID,NAME,DESCRIPTION,CITY,RATING) VALUES ( :id, :name, :description, :city, :rating )");
-        itemWriter.setItemSqlParameterSourceProvider(new BeanPropertyItemSqlParameterSourceProvider<Hotels>());
+        itemWriter.setItemSqlParameterSourceProvider(new BeanPropertyItemSqlParameterSourceProvider<HealthUnit>());
         return itemWriter;
     }
 
@@ -144,10 +144,10 @@ public class DataConfig {
      * @return
      */
 
-//    @Bean
-//    public ItemProcessor<HealthUnit, HealthUnit> processor() {
-//        return new DBLogProcessor();
-//    }
+    @Bean
+    public ItemProcessor<HealthUnit, HealthUnit> processor() {
+        return new DBlogProcessor();
+    }
 
     /**
      * FlatFileItemReader<T> Restartable ItemReader that reads lines from input setResource(Resource).
