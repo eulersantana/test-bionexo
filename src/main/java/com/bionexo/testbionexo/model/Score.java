@@ -72,5 +72,14 @@ public class Score {
 			}
 		}
 		return 1;
+	}
+
+
+	@Override
+	public String toString() {
+		return "Score [size=" + size + ", adaptationForSeniors=" + adaptationForSeniors + ", medicalEquipment="
+				+ medicalEquipment + ", medecine=" + medecine + "]";
 	}	
+	
+	
 }

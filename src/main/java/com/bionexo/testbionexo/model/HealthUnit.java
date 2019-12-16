@@ -99,6 +99,12 @@ public class HealthUnit {
 	public void setGeocode(Geocode geocode) {
 		this.geocode = geocode;
 	}
+
+	@Override
+	public String toString() {
+		return "HealthUnit [id=" + id + ", name=" + name + ", address=" + address + ", city=" + city + ", phone="
+				+ phone + ", score=" + score + ", geocode=" + geocode + "]";
+	}
 	
 	
 
